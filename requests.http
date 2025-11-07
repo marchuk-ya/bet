@@ -1,0 +1,33 @@
+POST http://localhost:8080/bets
+Content-Type: application/json
+{
+  "user_id": 123,
+  "amount": 100.5,
+  "crash_point": 2.5
+}
+
+POST http://localhost:8080/bets
+Content-Type: application/json
+{
+  "user_id": 456,
+  "amount": 250.75,
+  "crash_point": 5.0
+}
+
+GET http://localhost:8080/bets
+
+GET http://localhost:8080/bets?page=1&limit=10
+
+GET http://localhost:8080/bets?sort_by=amount&order=asc
+
+GET http://localhost:8080/bets?sort_by=amount&order=desc
+
+GET http://localhost:8080/bets?sort_by=created_at&order=desc
+
+GET http://localhost:8080/bets?user_id=123
+
+GET http://localhost:8080/bets?min_amount=50&max_amount=200
+
+GET http://localhost:8080/bets?user_id=123&min_amount=100&max_amount=150&page=1&limit=5&sort_by=amount&order=desc
+
+GET http://localhost:8080/bets/{id}
